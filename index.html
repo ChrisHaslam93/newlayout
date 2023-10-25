@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Format test</title>
+</head>
+<body>
+    <div class="page">
+        <div class="tab-menu">
+            <input type="radio" class="tab-item" name="tab-page" id="order_management" />
+            <label for="order_management">Order Management</label>
+            <input type="radio" class="tab-item" name="tab-page" id="pre_advice_management" />
+            <label for="pre_advice_management">Pre-Advice Management</label>
+            <input type="radio" class="tab-item" name="tab-page" id="inventory_management" />
+            <label for="inventory_management">Inventory Management</label>
+            <input type="radio" class="tab-item" name="tab-page" id="user_management" />
+            <label for="user_management">User Management</label>
+            <input type="radio" class="tab-item" name="tab-page" id="client_management" />
+            <label for="client_management">Client Management</label>
+            <input type="radio" class="tab-item" name="tab-page" id="site_management" />
+            <label for="site_management">Site Management</label>
+            <input type="radio" class="tab-item" name="tab-page" id="location_management" />
+            <label for="location_management">Location Management</label>
+            <input type="radio" class="tab-item" name="tab-page" id="wms_transactions" />
+            <label for="wms_transactions">WMS Transactions</label>
+        </div>
+        <div id="page_content">
+            <!-- Order Management -->
+            <div class="page-tab order-management">
+                <div class="tab-menu">
+                    <input type="radio" class="tab-item" name="order_management" id="order_header" />
+                    <label for="order_header">Order Header</label>
+                    <input type="radio" class="tab-item" name="order_management" id="order_line" />
+                    <label for="order_line">Order Line</label>
+                    <input type="radio" class="tab-item" name="order_management" id="upload_order" />
+                    <label for="upload_order">Upload Orders</label>
+                </div>
+                <div class="tab-menu">
+                    <input type="radio" class="tab-item" name="order_header_tabs" id="order_general_info" />
+                    <label for="order_general_info">General Info</label>
+                    <input type="radio" class="tab-item" name="order_header_tabs" id="order_address_info" />
+                    <label for="order_address_info">Address</label>
+                    <input type="radio" class="tab-item" name="order_header_tabs" id="order_extra_info" />
+                    <label for="order_extra_info">Extra Info</label>
+                </div>
+            </div>
+            <!-- User Management -->
+            <div class="page-tab user-management hidden">
+                <h1>hey there</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
