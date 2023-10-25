@@ -1,18 +1,38 @@
-// const resetAllTabColours = () => {
-//     document.querySelectorAll('.tab-selection').forEach(t => t.classList.remove('tab-selected'));
-// }
+const hideTabContent = (selector) => {
+    document.querySelectorAll(selector).forEach(t => {
+        t.classList.add('hidden')
+    });
+}
 
-// let tabMenu = document.querySelector('.tab-menu');
-// tabMenu.addEventListener('click', (e) => {
-//     resetAllTabColours();
-//     e.target.classList.add('tab-selected');
-//     displayCorrectPageContent(e);
-// });
+const showCorrectPageContent = (selector, event) => {
+    hideTabContent(selector);
+    document.querySelector(`#${event.target.id}_page`).classList.remove('hidden');
+}
 
+let mainTabs = document.querySelector('#main_tab');
+mainTabs.addEventListener('click', (e) => {
+    if(e.target.tagName === "INPUT"){
+        showCorrectPageContent('.page-content', e);
+    }
+})
 
-// const displayCorrectPageContent = (e) => {
-//     document.querySelectorAll('#page_content .page-tab').forEach(t => t.classList.add('hidden'));
-//     let selectedTab = document.querySelector('.' + e.target.innerText.toLowerCase().replace(' ', '-'));
-//     selectedTab.classList.remove('hidden');
-// }
+let orderTabs = document.querySelector('#order_tabs');
+orderTabs.addEventListener('click', (e) => {
+    if(e.target.tagName === "INPUT"){
+        showCorrectPageContent('.order-sub-page', e);
+    }
+})
 
+let orderHeaderTabs = document.querySelector('#order_header_page');
+orderHeaderTabs.addEventListener('click', (e) => {
+    if(e.target.tagName === "INPUT"){
+        showCorrectPageContent('.order-header-sub-tab', e);
+    }
+})
+
+let orderLineTabs = document.querySelector('#order_line_page');
+orderLineTabs.addEventListener('click', (e) => {
+    if(e.target.tagName === "INPUT"){
+        showCorrectPageContent('.order-line-sub-tab', e);
+    }
+})
