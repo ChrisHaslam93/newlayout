@@ -12,7 +12,7 @@ const showCorrectPageContent = (selector, event) => {
 let mainTabs = document.querySelector('#main_tab');
 mainTabs.addEventListener('click', (e) => {
     if(e.target.tagName === "INPUT"){
-        showCorrectPageContent('.page-content', e);
+        showCorrectPageContent('.root-page', e);
     }
 })
 

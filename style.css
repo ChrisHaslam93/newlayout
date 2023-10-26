@@ -3,12 +3,10 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'raleway';
-  background-color: #f1eee9;
+  font-size: 15px;
+  box-sizing: border-box;
+  font-family: "raleway";
+  background-color: rgb(241, 238, 233);
 }
 
 body {
@@ -16,85 +14,71 @@ body {
 }
 
 .page {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 15fr;
-      grid-template-rows: 1fr 15fr;
+  grid-template-rows: 1fr 26fr;
   row-gap: 1px;
   height: 97.5vh;
 }
 
 .tab-menu {
-  -ms-grid-row: 1;
   grid-row: 1;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[8];
-      grid-template-columns: repeat(8, 1fr);
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
   border-bottom: 1px solid #428bca;
 }
 
 @media (max-width: 1200px) {
   .tab-menu {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-
 @media (max-width: 650px) {
   .tab-menu {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 .tab-item {
   position: absolute;
   left: -99999em;
   top: -99999em;
 }
-
 .tab-item + label {
   cursor: pointer;
   float: left;
   border: 1px solid #aaa;
   border-bottom: 0;
-  background-color: #f1eee9;
+  background-color: rgb(241, 238, 233);
   margin-right: -1px;
-  padding: 0.5em 1em;
+  padding: 0.5em 0 0 0.5em;
 }
-
 .tab-item + label:hover {
-  background-color: lightgray;
+  background-color: rgb(211, 211, 211);
 }
-
 .tab-item:checked + label {
-  -webkit-box-shadow: 0 3px 0 -1px #fff, inset 0 5px 0 -1px #1345cd;
-          box-shadow: 0 3px 0 -1px #fff, inset 0 5px 0 -1px #1345cd;
+  box-shadow: 0 3px 0 -1px #fff, inset 0 5px 0 -1px #1345cd;
   background-color: #fff;
   font-weight: bold;
-  border-color: #428bca;
+}
+
+.page-content {
+  display: grid;
 }
 
 .page-tab {
   padding: 10px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 11fr;
-      grid-template-rows: 1fr 11fr;
-  border: 1px solid #1345cd;
+  grid-template-rows: 1fr 26fr;
+  border: 1px solid #428bca;
   border-top: none;
 }
 
 .tab-content {
   padding: 10px;
-  border: 1px solid #1345cd;
+  border: 1px solid #428bca;
   border-top: none;
 }
 
 .hidden {
   display: none;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
